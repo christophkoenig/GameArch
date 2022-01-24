@@ -116,13 +116,13 @@ render() {
                       <option>enabled</option>
                       <option>disabled</option>
                     </select>              
-                    <br></br>
                     <br />
 
                   {this.state.isActive ? <p style={{color: "red"}}>{this.state.errorMessage}</p> : null}
                   {this.state.isActiveSuccess ? <p style={{color: "green"}}>{this.state.successMessage}</p> : null}
 
-
+                  <br></br>
+                  <br></br>
                  <button className="addButton">
                     Save
                  </button>

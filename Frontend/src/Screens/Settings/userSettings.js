@@ -90,8 +90,8 @@ render() {
               type='text'
               required
             />
-            <br />
-            <br />
+            <br/><br/>
+            <br/><br/>
           <button className='addButton'>Update</button>
 
             {this.state.isActive ? <p style={{ color: "red" }}>{this.state.errorMessage}</p> : null}

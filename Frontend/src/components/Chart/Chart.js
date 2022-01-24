@@ -119,26 +119,6 @@ export class LineChart extends React.Component {
   componentDidMount() {
     this.myChart = new Chart(this.canvasRef.current, {
       type: 'line',
-      options: {
-			  maintainAspectRatio: false,
-        scales: {
-          xAxes: [
-            {
-              type: 'time',
-              time: {
-                unit: 'week'
-              }
-            }
-          ],
-          yAxes: [
-            {
-              ticks: {
-                min: 0
-              }
-            }
-          ]
-        }
-      },
       data: {
         labels: this.props.data.map(d => d.time),
         datasets: [{
@@ -151,6 +131,26 @@ export class LineChart extends React.Component {
           borderWidth: 2,
           lineTension: 0
         }]
+      },
+      options: {
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              time: {
+                unit: 'day'
+              }
+            }
+          ],
+          yAxes: [
+            {
+              ticks: {
+                min: 0
+              }
+            }
+          ]
+        },
+        maintainAspectRatio: false
       }
     });
   }

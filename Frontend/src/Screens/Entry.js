@@ -60,6 +60,4 @@ class Entry extends React.Component {
     )
   }
   }
-
-
 export default Entry
